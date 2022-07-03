@@ -28,6 +28,15 @@ Route::group(['middleware'=>['auth']],function (){
     Route::get('/tramites/prueba', function () {
         return view('tramites.prueba'); //REDERIZA VISTA
     })->name('tramites.prueba');
+    Route::get('/tramites/crear', function () {
+        return view('tramites.crear'); //CREAR TRAMITE DOCUMENTARIO.
+    })->name('tramites.crear');
+    Route::get('/tramites/mostrar', function () {
+        return view('tramites.mostrar'); //VER TUS TRAMITES.
+    })->name('tramites.mostrar');
+    Route::get('/tramites/requisitos', function () {
+        return view('tramites.requisitos'); //REQUISITOS DE TRAMITES.
+    })->name('tramites.requisitos');
 
 
     //RUTAS PARA CERTIFICADOS

@@ -36,6 +36,9 @@ class TramiteController extends Controller
     public function store(Request $request)
     {
         //
+        $asunto = $request->input('asunto');
+        $colegiado_id = $request->input('colegiado_id');
+        
     }
 
     /**
