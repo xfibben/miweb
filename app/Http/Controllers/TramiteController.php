@@ -25,6 +25,7 @@ class TramiteController extends Controller
     public function create()
     {
         //
+        return view('tramites.crear');
     }
 
     /**
@@ -36,8 +37,11 @@ class TramiteController extends Controller
     public function store(Request $request)
     {
         //
-        $asunto = $request->input('asunto');
-        $colegiado_id = $request->input('colegiado_id');
+        $datosTramite=request()->except('_token');
+        //$datosTramite=request()->only('nombre');
+        Tramite::insert($datosTramite);
+        return response()->json($datosTramite);
+        
         
     }
 
